@@ -1,0 +1,27 @@
+{
+  "name": "urltool",
+  "version": "0.0.0",
+  "description": "Node Module & Browser Library for parsing, formatting and serializing URLs",
+  "main": "dist.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thevideotrain/urltool.git"
+  },
+  "keywords": [
+    "url",
+    "urltool",
+    "urltoolkit",
+    "urlkit",
+    "urls",
+    "parse-url"
+  ],
+  "author": "The TheVideoTrain Author (s)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thevideotrain/urltool/issues"
+  },
+  "homepage": "https://github.com/thevideotrain/urltool#readme"
+}
