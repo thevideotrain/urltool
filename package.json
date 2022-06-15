@@ -4,7 +4,9 @@
   "description": "Node Module & Browser Library for parsing, formatting and serializing URLs",
   "main": "dist.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src.js -o dist.js && minify dist.js --out-file dist.js --mangle.keepClassName",
+    "test": "jest",
+    "push": "npm run test && npm run build && npm publish"
   },
   "repository": {
     "type": "git",
@@ -23,5 +25,12 @@
   "bugs": {
     "url": "https://github.com/thevideotrain/urltool/issues"
   },
-  "homepage": "https://github.com/thevideotrain/urltool#readme"
+  "homepage": "https://github.com/thevideotrain/urltool#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "babel-minify": "^0.5.2",
+    "jest": "^28.1.1"
+  }
 }

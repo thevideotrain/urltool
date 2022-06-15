@@ -1,3 +1,9 @@
+# Snyk
+.dccache
+
+# Build
+dist.js
+
 # Logs
 logs
 *.log
