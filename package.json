@@ -1,6 +1,6 @@
 {
   "name": "urltool",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Node Module & Browser Library for parsing, formatting and serializing URLs",
   "main": "dist.js",
   "scripts": {
