@@ -58,6 +58,6 @@ test('Custom Formats', () => {
     expect(new UrlTool.Url('https://google.com/search?q=ok').format('{host}/{path}')).toBe('google.com/search')
     expect(new UrlTool.Url('https://google.com/search?q=ok').format('{host}/{path}/')).toBe('google.com/search')
     expect(new UrlTool.Url('https://google.com/search?q=ok').format('{host}/{path}/{query}')).toBe('google.com/search?q=ok')
-    expect(new UrlTool.Url('https://google.com/search?q=ok').format('{host}/{path}/{query}/')).toBe('google.com/search/?q=ok')
-    expect(new UrlTool.Url('https://google.com/search?q=ok').format('{host}/{path}/{query}/{hash}')).toBe('google.com/search/?q=ok#ok')
+    expect(new UrlTool.Url('https://google.com/search?q=ok').format('{host}/{path}/{query}/')).toBe('google.com/search?q=ok/')
+    expect(new UrlTool.Url('https://google.com/search?q=ok').format('{host}/{path}/{query}')).toBe('google.com/search?q=ok')
 })

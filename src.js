@@ -149,7 +149,7 @@ const UrlTool = {
             result = result.replace(/{path}/g, this.path)
             result = result.replace(/{query}/g, this.query)
             result = result.replace(/{hash}/g, this.hash)
-            result = result.replace(/{port}/g, this.port)
+            result = result.replace(/{port}/g, this.__portwcolumn)
 
             return result
         }
@@ -174,17 +174,22 @@ const UrlTool = {
         }
 
         get host() {
-            return this._host + this.port
+            return this._host + this.__portwcolumn
         }
         set host(n) {
             this._host = n
             this._parse()
         }
 
-        get port() {
+        get __portwcolumn() {
             if (this._port.length <= 0) return ''
             if ((this.protocol === 'https' && this._port === '443') || (this.protocol === 'http' && this._port === '80')) return ''
             return ':' + this._port
+        }
+
+        get port() {
+            if (this._port.length <= 0) return ''
+            return this._port
         }
         set port(n) {
             this._port = n
