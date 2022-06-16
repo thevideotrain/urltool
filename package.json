@@ -5,7 +5,7 @@
   "main": "dist.js",
   "scripts": {
     "build": "babel src.js -o dist.js && minify dist.js --out-file dist.js --mangle.keepClassName",
-    "test": "jest",
+    "test": "npm run build && clear && jest",
     "push": "npm run test && npm run build && npm publish"
   },
   "repository": {
